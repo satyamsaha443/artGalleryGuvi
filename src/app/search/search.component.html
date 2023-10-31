@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <div class="search-container mb-4">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search for artwork, artists..." class="form-control mb-2" />
+    <button (click)="searchArtworks()" class="btn btn-primary">Search</button>
+  </div>
+
+  <!-- Artwork Listing -->
+  <div class="results-container row">
+    <div *ngFor="let art of searchResults" class="col-md-4 mb-4">
+      <div class="card">
+        <img [src]="getArtworkImageUrl(art.image_id)" alt="{{ art.title }}" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ art.title }}</h5>
+          <p class="card-text">{{ art.artist_title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<mat-toolbar color="primary" class="navbar">
+  <div class="navbar-left">
+    <button mat-icon-button (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img src="/assets/logo.jpg" alt="Art Institute of Chicago Gallery" class="navbar-logo">
+  </div>
+  <div class="navbar-right">
+    <nav>
+      <a routerLink="/browse" class="navbar-link">
+        <mat-icon class="navbar-icon">collections</mat-icon>
+        Artworks
+      </a>
+      <a routerLink="/search" class="navbar-link">
+        <mat-icon class="navbar-icon">search</mat-icon>
+        Search
+      </a>
+    </nav>
+    <a routerLink="/collections" class="navbar-link">
+      <mat-icon class="navbar-icon">bookmarks</mat-icon>
+      Collections
+    </a>
+    <a routerLink="/favorites" class="navbar-link">
+      <mat-icon class="navbar-icon">favorite</mat-icon>
+      Favorites
+    </a>
+  </div>
+</mat-toolbar>

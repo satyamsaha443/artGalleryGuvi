@@ -1,0 +1,14 @@
+
+
+    
+<h2 mat-dialog-title>{{data.title}}</h2>
+<mat-dialog-content class="mat-typography">
+    <img [src]="getArtworkImageUrl(data.image_id)" alt="{{ data.title }}" class="card-img-top" />
+    <p><strong>Artist:</strong>{{data.artist_title}}</p>
+    <p><strong>Data:</strong>{{data.data}}</p>
+    <p><strong>Description</strong>{{data.description}}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
